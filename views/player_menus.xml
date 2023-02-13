@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <menuitem id="tournament_menu_root" name="Tournaments">
+        <menuitem id="tournament_first_level_menu" name="Players">
+            <menuitem id="player_property_menu_action" action="player_property_action" />
+        </menuitem>
+
+        <menuitem id="player_team_level_menu" name="Teams">
+            <menuitem id="player_team_menu_type_action" action="player_team_action" />
+        </menuitem>
+    </menuitem>
+</odoo>

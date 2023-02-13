@@ -1,0 +1,3 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+e-sport-manager.access_player_property,access_player_property,e-sport-manager.model_player_property,base.group_user,1,1,1,1
+e-sport-manager.access_player_team,access_player_team,e-sport-manager.model_player_team,base.group_user,1,1,1,1
