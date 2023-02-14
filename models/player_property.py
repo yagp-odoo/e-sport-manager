@@ -1,5 +1,4 @@
 from odoo import models, fields
-from dateutil.relativedelta import relativedelta
 
 
 class PlayerProperty(models.Model):

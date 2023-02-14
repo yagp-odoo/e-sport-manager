@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+<odoo>
+    <record id="team_game_action" model="ir.actions.act_window">
+        <field name="name">Game Selection</field>
+        <field name="res_model">team.game</field>
+        <field name="view_mode">tree,form,kanban</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                Create a Game !!!
+            </p>
+        </field>
+    </record>
+
+    <!-- TREE(LIST) VIEW -->
+    <record id="team_game_view_tree" model="ir.ui.view">
+        <field name="name">team.game.tree</field>
+        <field name="model">team.game</field>
+        <field name="arch" type="xml">
+            <tree string="Channel">
+                <field name="name" />
+                <field name="players_required" />
+                <field name="platform" />
+            </tree>
+        </field>
+    </record>
+</odoo>
