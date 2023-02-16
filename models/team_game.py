@@ -10,3 +10,4 @@ class TeamGames(models.Model):
         string='Players Required', default=5)
 
     platform = fields.Selection([("M", "Mobile/Tablet"), ("PC", "Laptop/PC")])
+    scheduled_date = fields.Datetime()

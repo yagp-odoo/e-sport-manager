@@ -2,7 +2,7 @@
 <odoo>
     <menuitem id="tournament_menu_root" name="Tournaments">
         <menuitem id="tournament_first_level_menu" name="Players">
-            <menuitem id="player_property_menu_action" action="player_property_action" />
+            <menuitem id="player_detail_menu_action" action="player_detail_action" />
         </menuitem>
 
         <menuitem id="player_team_level_menu" name="Teams">
@@ -11,6 +11,10 @@
 
         <menuitem id="team_game_level_menu" name="Choose a Game!">
             <menuitem id="team_game_menu_type_action" action="team_game_action" />
+        </menuitem>
+
+        <menuitem id="game_tournament_level_menu" name="Choose a Tournament!">
+            <menuitem id="game_tournament_menu_type_action" action="game_tournament_action" />
         </menuitem>
     </menuitem>
 </odoo>

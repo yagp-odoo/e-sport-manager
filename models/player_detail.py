@@ -2,7 +2,7 @@ from odoo import models, fields
 
 
 class PlayerProperty(models.Model):
-    _name = "player.property"
+    _name = "player.detail"
     _description = "This is a Player Property Model"
     _rec_name = "in_game_name"
 
