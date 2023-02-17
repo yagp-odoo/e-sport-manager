@@ -3,11 +3,43 @@
     <record id="player_team_action" model="ir.actions.act_window">
         <field name="name">Team Details</field>
         <field name="res_model">player.team</field>
-        <field name="view_mode">tree,form</field>
+        <field name="view_mode">tree,form,kanban</field>
         <field name="help" type="html">
             <p class="o_view_nocontent_smiling_face">
                 Create Your first Team!
             </p>
         </field>
     </record>
+
+
+    <!-- FORM VIEW -->
+    <record id="player_team_view_form" model="ir.ui.view">
+        <field name="name">player.team.form</field>
+        <field name="model">player.team</field>
+        <field name="arch" type="xml">
+            <form string="Form View String">
+                <sheet>
+                    <field name="team_logo" widget="image" class="oe_avatar" />
+                    <div class="oe_title">
+                        <h1>
+                            <field name="team_name" placeholder="Team Name Here..." />
+                        </h1>
+                    </div>
+                    <br />
+                    <group>
+                        <group>
+                            <field name="player1_id" />
+                            <field name="player2_id" />
+                            <field name="player3_id" />
+                        </group>
+                        <group>
+                            <field name="player4_id" />
+                            <field name="player5_id" />
+                        </group>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
 </odoo>

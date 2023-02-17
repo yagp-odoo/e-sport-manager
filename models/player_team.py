@@ -7,6 +7,7 @@ class PlayerTeam(models.Model):
     _rec_name = "team_name"
 
     team_name = fields.Char(string="Team Name", required=True)
+    team_logo = fields.Image(string="Team Logo")
     player1_id = fields.Many2one(
         comodel_name="player.detail", string="Add Player 1")
     player2_id = fields.Many2one(

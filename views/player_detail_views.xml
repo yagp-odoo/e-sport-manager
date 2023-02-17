@@ -18,10 +18,41 @@
         <field name="model">player.detail</field>
         <field name="arch" type="xml">
             <tree string="Channel">
-                <field name="in_game_name" />
-                <field name="e_mail" />
+                <field name="name" />
                 <field name="discord" />
+                <field name="like_game_ids" widget="many2many_tags" />
+                <field name="contact" />
             </tree>
         </field>
     </record>
+
+
+    <!-- FORM VIEW -->
+    <record id="player_detail_view_form" model="ir.ui.view">
+        <field name="name">player.detail.form</field>
+        <field name="model">player.detail</field>
+        <field name="arch" type="xml">
+            <form string="Form View String">
+                <sheet>
+                    <div class="oe_title">
+                        <h1>
+                            <field name="name" placeholder="Enter Name Here..." />
+                        </h1>
+                    </div>
+                    <br />
+                    <group>
+                        <field name="like_game_ids" widget="many2many_tags" />
+                    </group>
+                    <br />
+                    <group>
+                        <field name="e_mail" />
+                        <field name="discord" />
+                        <field name="contact" />
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+
 </odoo>
