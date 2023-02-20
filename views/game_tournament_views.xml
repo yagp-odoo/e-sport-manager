@@ -10,4 +10,45 @@
             </p>
         </field>
     </record>
+
+    <!-- TREE(LIST) VIEW -->
+    <record id="game_tournament_view_tree" model="ir.ui.view">
+        <field name="name">game.tournament.tree</field>
+        <field name="model">game.tournament</field>
+        <field name="arch" type="xml">
+            <tree string="Channel">
+                <field name="name" />
+                <field name="game" />
+                <field name="teams_registered" />
+                <field name="scheduled_date" />
+            </tree>
+        </field>
+    </record>
+
+
+    <!-- FORM VIEW -->
+    <record id="game_tournament_view_form" model="ir.ui.view">
+        <field name="name">game.tournament.form</field>
+        <field name="model">game.tournament</field>
+        <field name="arch" type="xml">
+            <form string="Form View String">
+                <sheet>
+                    <div class="oe_title">
+                        <h1>
+                            <field name="name" placeholder="Select Team Here..." />
+                        </h1>
+                    </div>
+                    <br />
+                    <group>
+                        <field name="game" />
+                        <field name="teams_registered" />
+                        <field name="scheduled_date" />
+                    </group>
+                    <br />
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+
 </odoo>

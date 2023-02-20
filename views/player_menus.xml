@@ -9,7 +9,7 @@
             <menuitem id="player_team_menu_type_action" action="player_team_action" />
         </menuitem>
 
-        <menuitem id="team_game_level_menu" name="Choose a Game!">
+        <menuitem id="team_game_level_menu" name="Games Available">
             <menuitem id="team_game_menu_type_action" action="team_game_action" />
         </menuitem>
 

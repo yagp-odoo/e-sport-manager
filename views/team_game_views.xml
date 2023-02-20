@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <odoo>
     <record id="team_game_action" model="ir.actions.act_window">
-        <field name="name">Game Selection</field>
+        <field name="name">Games</field>
         <field name="res_model">team.game</field>
         <field name="view_mode">tree,form,kanban</field>
         <field name="help" type="html">
@@ -21,6 +21,30 @@
                 <field name="players_required" />
                 <field name="platform" />
             </tree>
+        </field>
+    </record>
+
+
+    <!-- FORM VIEW -->
+    <record id="team_game_view_form" model="ir.ui.view">
+        <field name="name">team.game.form</field>
+        <field name="model">team.game</field>
+        <field name="arch" type="xml">
+            <form string="Form View String">
+                <sheet>
+                    <div class="oe_title">
+                        <h1>
+                            <field name="name" placeholder="Game Name Here..." />
+                        </h1>
+                    </div>
+                    <br />
+                    <group>
+                        <field name="players_required" />
+                        <field name="platform" />
+                    </group>
+                    <br />
+                </sheet>
+            </form>
         </field>
     </record>
 </odoo>

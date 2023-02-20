@@ -8,5 +8,5 @@ class GameTournament(models.Model):
     name = fields.Char(string='Tournament Title')
     game = fields.Many2one(comodel_name="team.game", string='Game')
     teams_registered = fields.Many2one(
-        comodel_name="player.team", string='Teams Registered')
+        comodel_name="player.team", string='Team Name')
     scheduled_date = fields.Datetime()
