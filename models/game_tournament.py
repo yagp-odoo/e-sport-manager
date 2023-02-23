@@ -10,3 +10,11 @@ class GameTournament(models.Model):
     teams_registered = fields.Many2one(
         comodel_name="player.team", string='Team Name')
     scheduled_date = fields.Datetime()
+
+    state = fields.Selection(
+        string='State of tournament',
+        selection=[('D', 'Draft'), ('C', 'Created'),
+                   ('L', 'Live & Running!'), ('E', 'Ended'), ('P', 'Payments Done')],
+        copy=False,
+        default='D'
+    )

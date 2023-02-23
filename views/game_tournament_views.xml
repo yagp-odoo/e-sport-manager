@@ -32,6 +32,9 @@
         <field name="model">game.tournament</field>
         <field name="arch" type="xml">
             <form string="Form View String">
+                <header>
+                    <field name="state" widget="statusbar" />
+                </header>
                 <sheet>
                     <div class="oe_title">
                         <h1>

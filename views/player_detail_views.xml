@@ -21,7 +21,8 @@
                 <field name="name" />
                 <field name="discord" />
                 <field name="like_game_ids" widget="many2many_tags" />
-                <field name="contact" />
+                <field name="nation_id" />
+                <field name="contact" option="hide" />
             </tree>
         </field>
     </record>
@@ -44,13 +45,45 @@
                         <field name="like_game_ids" widget="many2many_tags" />
                     </group>
                     <br />
-                    <group>
-                        <field name="e_mail" />
-                        <field name="discord" />
-                        <field name="contact" />
-                    </group>
+                    <notebook>
+                        <page name="description_page" string="Description">
+                            <group>
+                                <field name="e_mail" />
+                                <field name="discord" />
+                                <field name="contact" />
+                                <field name="nation_id" />
+                            </group>
+                        </page>
+                        <page name="player_avail" string="Availability">
+                            <group>
+                                <field name="active" />
+                            </group>
+                        </page>
+                        <page name="info_page" string="Other Info">
+                            <!-- SOCIAL MEDIA LINKS HERE -->
+                        </page>
+                    </notebook>
                 </sheet>
             </form>
+        </field>
+    </record>
+
+    <!-- SEARCH VIEW -->
+    <record id="player_detail_view_search" model="ir.ui.view">
+        <field name="name">player.detail.search</field>
+        <field name="model">player.detail</field>
+        <field name="arch" type="xml">
+            <search string="Search View String">
+                <field name="name" />
+                <field name="discord" />
+                <field name="e_mail" />
+                <separator />
+                <filter string="Archived" name="active" domain="[('active', '=', False)]" />
+                <group expand="1" string="Group By">
+                    <filter string="Nationality" name="nation_id"
+                        context="{'group_by':'nation_id'}" />
+                </group>
+            </search>
         </field>
     </record>
 
