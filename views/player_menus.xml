@@ -2,20 +2,15 @@
 <odoo>
     <menuitem id="tournament_menu_root" name="Tournaments"
         web_icon="e-sport-manager,static/description/icon.png">
-        <menuitem id="tournament_first_level_menu" name="Players">
-            <menuitem id="player_detail_menu_action" action="player_detail_action" />
-        </menuitem>
+        <menuitem id="tournament_first_level_menu" name="Players" action="player_detail_action"></menuitem>
 
-        <menuitem id="player_team_level_menu" name="Teams">
-            <menuitem id="player_team_menu_type_action" action="player_team_action" />
-        </menuitem>
+        <menuitem id="player_team_level_menu" name="Teams" action="player_team_action"></menuitem>
 
-        <menuitem id="team_game_level_menu" name="Games Available">
-            <menuitem id="team_game_menu_type_action" action="team_game_action" />
-        </menuitem>
+        <menuitem id="team_game_level_menu" name="Games Available" action="team_game_action"></menuitem>
 
-        <menuitem id="game_tournament_level_menu" name="Choose a Tournament!">
-            <menuitem id="game_tournament_menu_type_action" action="game_tournament_action" />
+        <menuitem id="game_tournament_level_menu" name="Choose a Tournament!"
+            action="game_tournament_action">
+            <!-- <menuitem id="game_tournament_menu_type_action"  /> -->
         </menuitem>
     </menuitem>
 </odoo>

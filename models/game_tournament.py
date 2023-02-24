@@ -9,12 +9,21 @@ class GameTournament(models.Model):
     game = fields.Many2one(comodel_name="team.game", string='Game')
     teams_registered = fields.Many2one(
         comodel_name="player.team", string='Team Name')
-    scheduled_date = fields.Datetime()
+    scheduled_date = fields.Datetime(default=fields.Date.today())
 
     state = fields.Selection(
         string='State of tournament',
-        selection=[('D', 'Draft'), ('C', 'Created'),
+        selection=[('C', 'Created'),
                    ('L', 'Live & Running!'), ('E', 'Ended'), ('P', 'Payments Done')],
         copy=False,
-        default='D'
+        default='C'
     )
+
+    def btn_start(self):
+        self.state = "L"
+
+    def btn_end(self):
+        self.state = "E"
+
+    def btn_pay(self):
+        self.state = "P"

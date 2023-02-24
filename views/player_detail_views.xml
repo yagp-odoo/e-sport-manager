@@ -3,7 +3,7 @@
     <record id="player_detail_action" model="ir.actions.act_window">
         <field name="name">Player Details</field>
         <field name="res_model">player.detail</field>
-        <field name="view_mode">tree,form,kanban</field>
+        <field name="view_mode">tree,form</field>
         <field name="help" type="html">
             <p class="o_view_nocontent_smiling_face">
                 Create a Player !
@@ -22,7 +22,7 @@
                 <field name="discord" />
                 <field name="like_game_ids" widget="many2many_tags" />
                 <field name="nation_id" />
-                <field name="contact" option="hide" />
+                <field name="contact" optional="hide" />
             </tree>
         </field>
     </record>
@@ -47,7 +47,7 @@
                     <br />
                     <notebook>
                         <page name="description_page" string="Description">
-                            <group>
+                            <group string="Personal Details">
                                 <field name="e_mail" />
                                 <field name="discord" />
                                 <field name="contact" />
@@ -59,8 +59,23 @@
                                 <field name="active" />
                             </group>
                         </page>
-                        <page name="info_page" string="Other Info">
-                            <!-- SOCIAL MEDIA LINKS HERE -->
+                        <page name="info_page" string="Personal Information">
+                            <group>
+                                <!-- SOCIAL MEDIA LINKS HERE -->
+                                <field name="dob" />
+                                <field name="age" />
+                            </group>
+                        </page>
+                        <page name="game_page" string="Game Details">
+                            <group string="BGMI Details">
+                                <field name="bgmi_ign" />
+                            </group>
+                            <group string="Valorant Details">
+                                <field name="valo_ign" />
+                            </group>
+                            <group string="CSGO Details">
+                                <field name="valo_ign" />
+                            </group>
                         </page>
                     </notebook>
                 </sheet>
