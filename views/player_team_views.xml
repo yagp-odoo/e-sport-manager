@@ -3,7 +3,7 @@
     <record id="player_team_action" model="ir.actions.act_window">
         <field name="name">Team Details</field>
         <field name="res_model">player.team</field>
-        <field name="view_mode">tree,form,kanban</field>
+        <field name="view_mode">list,form,kanban</field>
         <field name="help" type="html">
             <p class="o_view_nocontent_smiling_face">
                 Create Your first Team!
@@ -26,20 +26,20 @@
                         </h1>
                     </div>
                     <br />
-                    <group>
+                    <notebook>
+                    <page string="Team Members">
                         <group>
-                            <field name="player1_id" />
-                            <field name="player2_id" />
-                            <field name="player3_id" />
+                            <field name="players_id" nolabel="1">
+                            <!-- TODO: Do `editable="bottom"` and make it work -->
+                                <list>
+                                    <field name="player_name"/>
+                                </list>
+                            </field>
                         </group>
-                        <group>
-                            <field name="player4_id" />
-                            <field name="player5_id" />
-                        </group>
-                    </group>
+                        </page>
+                    </notebook>
                 </sheet>
             </form>
         </field>
     </record>
-
 </odoo>

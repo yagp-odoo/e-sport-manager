@@ -1,5 +1,6 @@
 id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
-e-sport-manager.access_player_detail,access_player_detail,e-sport-manager.model_player_detail,base.group_user,1,1,1,1
-e-sport-manager.access_player_team,access_player_team,e-sport-manager.model_player_team,base.group_user,1,1,1,1
-e-sport-manager.access_team_game,access_team_game,e-sport-manager.model_team_game,base.group_user,1,1,1,1
-e-sport-manager.access_game_tournament,access_game_tournament,e-sport-manager.model_game_tournament,base.group_user,1,1,1,1
+e_sport_manager.access_player_detail,access_player_detail,e_sport_manager.model_player_detail,base.group_user,1,1,1,1
+e_sport_manager.access_player_team,access_player_team,e_sport_manager.model_player_team,base.group_user,1,1,1,1
+e_sport_manager.access_team_game,access_team_game,e_sport_manager.model_team_game,base.group_user,1,1,1,1
+e_sport_manager.access_game_tournament,access_game_tournament,e_sport_manager.model_game_tournament,base.group_user,1,1,1,1
+e_sport_manager.access_player_team_member,access_player_team_member,e_sport_manager.model_player_team_member,base.group_user,1,1,1,1
